@@ -29,7 +29,7 @@ public class Renderer_Class {
   }
   
   public void RenderItem (Item ItemToRender) {
-    PImage ItemTexture = Textures.ItemTextures[ItemToRender.Type];
+    PImage ItemTexture = Textures.ItemTextures[ItemToRender.ID];
     image (ItemTexture, (ItemToRender.XPos + ItemToRender.BlockX) * BlockSize, (ItemToRender.YPos + ItemToRender.BlockY) * BlockSize);
   }
   

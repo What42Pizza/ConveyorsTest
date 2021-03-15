@@ -1,4 +1,5 @@
-// Started 03/13/21
+// Started 03/14/21
+// Last updated 03/15/21
 
 
 
@@ -25,6 +26,8 @@ Textures_Class Textures = new Textures_Class();
 BlockTypes_Class BlockTypes = new BlockTypes_Class();
 ItemTypes_Class ItemTypes = new ItemTypes_Class();
 ItemsHandler_Class ItemsHandler = new ItemsHandler_Class();
+InputHandler_Class InputHandler = new InputHandler_Class();
+Cursor_Class Cursor = new Cursor_Class();
 ErrorChecker_Class ErrorChecker = new ErrorChecker_Class();
 
 
@@ -53,4 +56,14 @@ void settings() {
 
 void draw() {
   Manager.draw();
+}
+
+
+
+void keyPressed() {
+  Manager.keyPressed();
+}
+
+void keyReleased() {
+  Manager.keyReleased();
 }

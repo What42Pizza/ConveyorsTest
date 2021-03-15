@@ -17,6 +17,20 @@ public class BlockTypes_Class {
     "ConveyorRight",
   };
   
+  public final int[] ItemIDs = {
+    1,
+    1,
+    1,
+    1,
+  };
+  
+  public final int[] BlockRotations = {
+    0,
+    1,
+    2,
+    3,
+  };
+  
   
   
   public String GetBlockName (int BlockID) {
@@ -28,6 +42,16 @@ public class BlockTypes_Class {
       if (BlockNames[i].equals(BlockName)) return i;
     }
     throw (new BlockNameNotRecognizedException ("Could not find block with name " + BlockName + "."));
+  }
+  
+  
+  
+  public int GetItemIDOfBlock (int BlockID) {
+    return ItemIDs[BlockID];
+  }
+  
+  public int GetBlockRotation (int BlockID) {
+    return BlockRotations[BlockID];
   }
   
   

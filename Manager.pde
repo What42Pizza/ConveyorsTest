@@ -58,11 +58,48 @@ public class Manager_Class {
   void DrawNormal() {
     
     // Update
+    InputHandler.Update();
+    Cursor.Update();
     
     // Render
     background (255);
     Renderer.RenderBlocks();
     Renderer.RenderItems();
+    
+    // Finish
+    InputHandler.EndFrame();
+    
+  }
+  
+  
+  
+  
+  
+  void keyPressed() {
+    InputHandler.keyPressed();
+  }
+  
+  void keyReleased() {
+    InputHandler.keyReleased();
+  }
+  
+  
+  
+  
+  
+  void OnMousePressed() {
+    Cursor.HandleClick();
+  }
+  
+  
+  
+  void PlaceBlock (int BlockID, int XPos, int YPos) {
+    Map.SetBlock (XPos, YPos, BlockID);
+  }
+  
+  
+  
+  void PlaceItem (Item ItemIn, int XPos, int YPos) {
     
   }
   
