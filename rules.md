@@ -45,3 +45,23 @@ This is a list of ideas for coding a convey belt item movement system. This will
 3.1: I'm too tired to think this through right now but you can figure it out
 
 3.2: this is also true for items being put onto a belt
+
+<br />
+<br />
+<br />
+
+4.0: Due to the nature of this system, multithreading would be relatively easy
+
+4.1: Each thread could just pull an item from the list, do the logic for it, then skip ahead by the number of threads to the next item
+
+4.2: When using a single thread, you can add and remove items from the list willy milly, but that won't do here
+
+4.2.1: For this, you'd have to have a list of items to update this cycle, a list of new items to be updated, and a list of indicies of items to be remove
+
+4.2.2: Instead of adding and removing items to and from the list directly, these lists would be used in order to make sure that the right items are being updated
+
+4.2.3: Once all the threads are done, the list can be updated
+
+4.3: You might think there'd be problems when two belts are merging onto a belt from the side, but the priority bit will already prevent any problems from occuring (and this goes for all types of mergings)
+
+4.3.1: One nice thing about this system is that it's already set up so that only one thread will write to the priority bit, again preventing any possible problems
