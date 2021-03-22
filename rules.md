@@ -65,3 +65,5 @@ This is a list of ideas for coding a convey belt item movement system. This will
 4.3: You might think there'd be problems when two belts are merging onto a belt from the side, but the priority bit will already prevent any problems from occuring (and this goes for all types of mergings)
 
 4.3.1: One nice thing about this system is that it's already set up so that only one thread will write to the priority bit, again preventing any possible problems
+
+4.3.2: You might think there'd be a problem with two side-merging belts if the prioritized belt is updated first because this would allow the other side to merge when updated, but this won't be a problem as long as the item is moved (blocking the other belt) before the priority bit is flipped
